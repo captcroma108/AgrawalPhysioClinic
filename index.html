@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Agrawal Physiotherapy Clinic | Dr. Preeti Garg | Best Physiotherapist in Mhow</title>
+    <meta name="description" content="Best physiotherapist in Mhow - Dr. Preeti Garg offers advanced pain relief, stroke rehab, sports injury treatment, and personalized care. Book your appointment today.">
+    <meta name="keywords" content="Physiotherapist in Mhow, best physiotherapy clinic near me, pain relief therapy Mhow, stroke rehabilitation, sports injury treatment Mhow, post-surgery rehab, Dr. Preeti Garg">
+    <meta name="author" content="Agrawal Physiotherapy and Rehabilitation Clinic">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1e2a3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+        :root {
+            --primary-teal: #2c7a6e;
+            --primary-dark: #1f5e54;
+            --primary-soft: #dff3ef;
+            --accent-blue: #eef7fc;
+            --soft-green-bg: #f4fbf8;
+            --gray-light: #f8fafc;
+            --gray-mid: #eef2f0;
+            --text-dark: #1a2c3e;
+            --text-muted: #4a5b6e;
+            --shadow-sm: 0 8px 20px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.05);
+            --shadow-md: 0 20px 30px -12px rgba(0,0,0,0.08);
+            --border-radius-card: 28px;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        /* Buttons */
+        .btn-primary {
+            background: var(--primary-teal);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 44px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid var(--primary-teal);
+            color: var(--primary-teal);
+            padding: 12px 28px;
+            border-radius: 44px;
+            font-weight: 600;
+            transition: 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-outline:hover {
+            background: var(--primary-soft);
+            border-color: var(--primary-dark);
+        }
+        .btn-wa {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 44px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        /* floating */
+        .float-wa, .float-call {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #25D366;
+            color: white;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+        .float-call {
+            background: #0077b6;
+            bottom: 104px;
+            right: 28px;
+            font-size: 26px;
+        }
+        .float-wa:hover, .float-call:hover { transform: scale(1.08); }
+        /* header */
+        header {
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(4px);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            flex-wrap: wrap;
+        }
+        .logo h2 {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: var(--primary-teal);
+            letter-spacing: -0.3px;
+        }
+        .logo p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: 0.2s;
+        }
+        .nav-links a:hover { color: var(--primary-teal); }
+        .mobile-menu-icon {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        /* hero */
+        .hero {
+            background: linear-gradient(115deg, #ffffff 50%, var(--soft-green-bg) 100%);
+            padding: 50px 0 70px;
+        }
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .hero-content { flex: 1; }
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+        .hero-buttons { display: flex; gap: 18px; flex-wrap: wrap; }
+        .hero-img { flex: 1; text-align: center; }
+        .hero-img img {
+            max-width: 100%;
+            border-radius: 48px;
+            box-shadow: var(--shadow-md);
+            background: #e2f0ec;
+        }
+        section { padding: 80px 0; }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+        .section-sub {
+            text-align: center;
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto 48px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .service-card {
+            background: white;
+            border-radius: var(--border-radius-card);
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid #eef2f0;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-soft);
+        }
+        .service-icon {
+            background: var(--primary-soft);
+            width: 74px;
+            height: 74px;
+            line-height: 74px;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            font-size: 34px;
+            color: var(--primary-teal);
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .why-item {
+            text-align: center;
+            padding: 28px 18px;
+            background: var(--gray-light);
+            border-radius: 28px;
+            transition: 0.2s;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #eef2f0;
+        }
+        .stars { color: #f5b042; margin-bottom: 14px; letter-spacing: 2px; }
+        .trust-badge-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 40px 0 20px;
+        }
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            padding: 8px 22px;
+            border-radius: 60px;
+            box-shadow: var(--shadow-sm);
+        }
+        .appointment-form {
+            max-width: 720px;
+            margin: 0 auto;
+            background: white;
+            padding: 44px;
+            border-radius: 48px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-mid);
+        }
+        .form-group { margin-bottom: 24px; }
+        input, textarea {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 44px;
+            border: 1px solid #dce5e2;
+            font-family: inherit;
+            font-size: 1rem;
+            background: white;
+        }
+        .map-container {
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            margin: 20px 0;
+        }
+        footer {
+            background: #102a2a;
+            color: #cbd5e6;
+            padding: 56px 0 28px;
+        }
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col a {
+            color: #cbd5e6;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 20px;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                background: white;
+                padding: 20px 0;
+            }
+            .nav-links a { margin: 8px 0; }
+            .nav-links.show { display: flex; }
+            .mobile-menu-icon { display: block; }
+            section { padding: 60px 0; }
+            .appointment-form { padding: 28px; }
+        }
+        .clickable-phone { font-weight: 600; color: var(--primary-teal); text-decoration: none; }
+        .rating-stars-static { display: inline-flex; background: #f8f9fa; padding: 6px 14px; border-radius: 40px; align-items: center; gap: 6px; }
+        .hours-detail { font-size: 0.95rem; background: var(--primary-soft); display: inline-block; padding: 4px 12px; border-radius: 40px; margin-top: 6px; }
+    </style>
+</head>
+<body>
+
+<!-- Floating Buttons -->
+<a href="tel:+916260886464" class="float-call" aria-label="Call Now"><i class="fas fa-phone-alt"></i></a>
+<a href="https://wa.me/916260886464?text=Hello%20Dr.%20Preeti%2C%20I%20want%20to%20book%20an%20appointment%20for%20physiotherapy%20care." class="float-wa" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<header>
+    <div class="container">
+        <div class="nav">
+            <div class="logo">
+                <h2>Agrawal PhysioClinic</h2>
+                <p>Dr. Preeti Garg | Rehabilitation Expert</p>
+            </div>
+            <div class="mobile-menu-icon" id="menuToggle"><i class="fas fa-bars"></i></div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Recovery Stories</a>
+                <a href="#appointment">Book Now</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Pain Relief. Recovery. Better Movement.</h1>
+                <p>Expert Physiotherapy Care by Dr. Preeti Garg — personalized treatments for back pain, stroke recovery, sports injuries, and post-surgery rehab in Mhow.</p>
+                <div class="hero-buttons">
+                    <a href="#appointment" class="btn-primary"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+                    <a href="tel:+916260886464" class="btn-outline"><i class="fas fa-phone-alt"></i> Call Now</a>
+                </div>
+                <div class="trust-badge-row" style="justify-content: flex-start; margin-top: 28px;">
+                    <div class="badge"><i class="fas fa-user-md" style="color: var(--primary-teal);"></i> 10+ Years Exp</div>
+                    <div class="badge"><i class="fas fa-smile" style="color: var(--primary-teal);"></i> 2000+ Patients</div>
+                    <div class="badge"><i class="fas fa-star" style="color: #f5b042;"></i> 4.9 Rating</div>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="https://placehold.co/550x420/eef7fc/2c7a6e?text=Physiotherapy+Care+India" alt="Patient therapy session at clinic" style="object-fit: cover; width:100%;">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="background: var(--gray-light);">
+        <div class="container">
+            <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+                <span style="background: var(--primary-soft); padding: 6px 20px; border-radius: 60px; font-weight: 500;"><i class="fas fa-stethoscope"></i> Your Trusted Recovery Partner</span>
+                <h2 style="font-size: 2rem; margin: 24px 0 16px;">Dr. Preeti Garg — Expert Physiotherapist in Mhow</h2>
+                <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 800px; margin: 0 auto;">At Agrawal Physiotherapy and Rehabilitation Clinic, we blend modern evidence-based techniques with compassionate care. Every patient receives a personalized plan to reduce pain, restore movement, and regain independence. Whether it's chronic back pain, stroke recovery, or sports injury — we are here to guide you.</p>
+                <div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-top: 40px;">
+                    <div><i class="fas fa-check-circle" style="color: var(--primary-teal);"></i> Personalized treatment plans</div>
+                    <div><i class="fas fa-microscope"></i> Advanced therapy techniques</div>
+                    <div><i class="fas fa-hand-holding-heart"></i> Patient-focused care</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Specialized Therapies</h2>
+            <p class="section-sub">Modern rehabilitation tailored to your unique needs — in-clinic and home visits available.</p>
+            <div class="services-grid">
+                <div class="service-card"><div class="service-icon"><i class="fas fa-spine"></i></div><h3>Spine & Back Pain Therapy</h3><p>Manual therapy, posture correction & core strengthening for lasting relief.</p></div>
+                <div class="service-card"><div class="service-icon"><i class="fas fa-hand-holding-medical"></i></div><h3>Pain Management Therapy</h3><p>Advanced modalities to relieve joint, neck, and chronic pain.</p></div>
+                <div class="service-card"><div class="service-icon"><i class="fas fa-procedures"></i></div><h3>Post-Surgery Rehabilitation</h3><p>Knee replacement, spine surgery, ACL — regain mobility faster.</p></div>
+                <div class="service-card"><div class="service-icon"><i class="fas fa-brain"></i></div><h3>Stroke Rehabilitation</h3><p>Neuro-rehab techniques to restore function and independence.</p></div>
+                <div class="service-card"><div class="service-icon"><i class="fas fa-futbol"></i></div><h3>Sports Injury Treatment</h3><p>Return-to-sport programs, injury prevention & strength training.</p></div>
+                <div class="service-card"><div class="service-icon"><i class="fas fa-joint"></i></div><h3>Joint & Arthritis Care</h3><p>Reduce stiffness, improve mobility with gentle exercises & therapy.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us + Trust -->
+    <section style="background: var(--accent-blue);">
+        <div class="container">
+            <h2 class="section-title">Why Choose Agrawal Physiotherapy Clinic?</h2>
+            <div class="why-grid">
+                <div class="why-item"><i class="fas fa-user-md" style="font-size: 38px; color: var(--primary-teal); margin-bottom: 12px; display: block;"></i><h4>Experienced Physiotherapist</h4><p>Dr. Preeti Garg with advanced clinical expertise.</p></div>
+                <div class="why-item"><i class="fas fa-clipboard-list" style="font-size: 38px; color: var(--primary-teal);"></i><h4>Personalized Plans</h4><p>Every patient gets a custom recovery roadmap.</p></div>
+                <div class="why-item"><i class="fas fa-bolt" style="font-size: 38px; color: var(--primary-teal);"></i><h4>Advanced Techniques</h4><p>Dry needling, IFT, cupping, therapeutic ultrasound.</p></div>
+                <div class="why-item"><i class="fas fa-rupee-sign" style="font-size: 38px; color: var(--primary-teal);"></i><h4>Affordable Care</h4><p>Quality treatment accessible to all.</p></div>
+                <div class="why-item"><i class="fas fa-heart" style="font-size: 38px; color: var(--primary-teal);"></i><h4>Local Trusted Clinic</h4><p>Recognized as best physiotherapist in Mhow.</p></div>
+            </div>
+            <div class="trust-badge-row">
+                <div class="badge"><i class="fas fa-certificate"></i> Certified & Ethical Care</div>
+                <div class="badge"><i class="fas fa-smile-beam"></i> 98% Patient Satisfaction</div>
+                <div class="badge"><i class="fas fa-trophy"></i> Mhow's Trusted Rehab Center</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Real Recovery Stories</h2>
+            <p class="section-sub">What our patients say about their journey to pain-free living</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"I had severe lower back pain for months. Dr. Preeti's therapy and personalized exercises gave me relief in 2 weeks. Highly recommended in Mhow!"</p><h4>- Sunil Sharma</h4><i class="fas fa-quote-right" style="color:#ccc;"></i></div>
+                <div class="testimonial-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"After my mother's stroke, home physiotherapy sessions helped her regain walking ability. So grateful for the caring team."</p><h4>- Meera Joshi</h4></div>
+                <div class="testimonial-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><p>"Best sports injury recovery clinic! I recovered from my ankle sprain quickly and returned to cricket. Thank you!"</p><h4>- Arjun Rathore</h4></div>
+                <div class="testimonial-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>"Affordable, professional, and results-driven. My knee pain is much better after 6 sessions."</p><h4>- Lata Verma</h4></div>
+            </div>
+            <div style="text-align: center; margin-top: 48px;">
+                <a href="https://maps.app.goo.gl/RL4FgmDWbmr57wAL7" target="_blank" class="btn-outline" style="background: white;"><i class="fab fa-google"></i> Read More Reviews on Google</a>
+                <div style="margin-top: 16px;" class="rating-stars-static"><i class="fas fa-star" style="color:#f5b042;"></i><i class="fas fa-star" style="color:#f5b042;"></i><i class="fas fa-star" style="color:#f5b042;"></i><i class="fas fa-star" style="color:#f5b042;"></i><i class="fas fa-star" style="color:#f5b042;"></i> <span>4.9 · 150+ Google Reviews</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section: Start Your Recovery -->
+    <section style="background: var(--primary-teal); color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 2rem;">Start Your Recovery Today</h2>
+            <p style="margin: 16px auto; max-width: 560px;">Don’t let pain limit your life. Book a consultation with Dr. Preeti Garg and take the first step toward pain-free movement.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
+                <a href="tel:+916260886464" class="btn-outline" style="background: white; border-color: white; color: var(--primary-teal);"><i class="fas fa-phone-alt"></i> Call Now</a>
+                <a href="#appointment" class="btn-primary" style="background: white; color: var(--primary-teal);"><i class="fas fa-calendar-alt"></i> Book Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment">
+        <div class="container">
+            <h2 class="section-title">Request a Callback</h2>
+            <p class="section-sub">Fill the form and our team will confirm your appointment within 2 hours</p>
+            <div class="appointment-form">
+                <form id="bookingForm">
+                    <div class="form-group"><input type="text" placeholder="Full Name *" id="fullname" required></div>
+                    <div class="form-group"><input type="tel" placeholder="Mobile Number *" id="mobile" required></div>
+                    <div class="form-group"><textarea rows="3" placeholder="Tell us about your pain / condition (e.g., back pain, stroke recovery, sports injury)" id="condition"></textarea></div>
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between;">
+                        <button type="submit" class="btn-primary"><i class="fas fa-calendar-check"></i> Book Your Session</button>
+                        <button type="button" id="whatsappFormBtn" class="btn-wa"><i class="fab fa-whatsapp"></i> Book via WhatsApp</button>
+                    </div>
+                    <p style="font-size: 12px; margin-top: 20px;">✓ Free consultation guidance  ✓ 100% privacy</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact + Map (with CORRECT location from Google Maps link) -->
+    <section id="contact" style="background: var(--gray-light);">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 48px;">
+                <div style="flex: 1.2;">
+                    <h3><i class="fas fa-map-marker-alt" style="color: var(--primary-teal);"></i> Clinic Address</h3>
+                    <p>30, Shantinagar Main Road, near Shani Mandir, Shanti Nagar, Dr. Ambedkar Nagar, Mhow Gaon, Madhya Pradesh 453441</p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+916260886464" class="clickable-phone">+91 6260886464</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/916260886464" style="color: var(--primary-teal);">+91 6260886464 (WhatsApp)</a></p>
+                    <p><i class="far fa-clock"></i> Working Hours: 
+                        <strong>Mon–Sat:</strong> 9:00 AM – 12:30 PM, 5:00 PM – 8:00 PM<br>
+                        <span class="hours-detail"><i class="fas fa-info-circle"></i> Sunday: Emergency / Appointment basis (hours may vary on holidays)</span>
+                    </p>
+                    <div class="map-container">
+                        <!-- Exact Google Maps Embed using the correct place link (Agrawal Physiotherapy and Rehabilitation clinic - Dr. Preeti Garg) -->
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Agrawal+Physiotherapy+and+Rehabilitation+clinic+Dr.+Preeti+Garg+Mhow&z=16&output=embed"
+                            width="100%" 
+                            height="280" 
+                            style="border:0; border-radius: 24px;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <p style="font-size: 12px; margin-top: 8px;"><i class="fas fa-location-dot"></i> <a href="https://maps.app.goo.gl/RL4FgmDWbmr57wAL7" target="_blank" style="color: var(--primary-teal);">Open in Google Maps for exact directions</a></p>
+                    </div>
+                </div>
+                <div style="flex: 0.9;">
+                    <h3>Quick Connect</h3>
+                    <p>Need immediate assistance? Call or WhatsApp for appointment booking and home visit queries.</p>
+                    <a href="tel:+916260886464" class="btn-outline" style="margin-bottom: 14px; display: inline-block;"><i class="fas fa-phone"></i> Click to Call</a><br>
+                    <a href="https://wa.me/916260886464?text=Hi%20Dr.%20Preeti%2C%20I%20need%20physiotherapy%20help%20for%20pain%20relief." target="_blank" class="btn-wa" style="margin-top: 12px;"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+                    <p style="margin-top: 28px;"><strong>🔍 Search Locally:</strong> Best Physiotherapist in Mhow | Physiotherapy clinic near Shani Mandir | Pain relief therapy Mhow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><h4 style="color:white;">Agrawal Physiotherapy & Rehabilitation Clinic</h4><p>Dr. Preeti Garg — Empowering recovery through expert care.</p></div>
+            <div class="footer-col"><h4>Quick Links</h4><a href="#home">Home</a><a href="#services">Services</a><a href="#appointment">Appointment</a><a href="#testimonials">Reviews</a></div>
+            <div class="footer-col"><h4>Contact</h4><p>📞 +91 6260886464</p><p>📍 Mhow, Madhya Pradesh</p><div class="social-icons"><a href="https://wa.me/916260886464" target="_blank"><i class="fab fa-whatsapp"></i></a><a href="https://maps.app.goo.gl/RL4FgmDWbmr57wAL7" target="_blank"><i class="fab fa-google"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div></div>
+        </div>
+        <hr style="border-color:#2b4b47;">
+        <p style="text-align: center; margin-top: 28px;">© 2025 Agrawal Physiotherapy and Rehabilitation Clinic | Dr. Preeti Garg | Trusted Care in Mhow</p>
+    </div>
+</footer>
+
+<script>
+    const toggleBtn = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navLinks');
+    if(toggleBtn){
+        toggleBtn.addEventListener('click', () => navMenu.classList.toggle('show'));
+    }
+    // form submission
+    const form = document.getElementById('bookingForm');
+    if(form){
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('fullname').value.trim();
+            const phone = document.getElementById('mobile').value.trim();
+            if(!name || !phone) { alert("Please enter your name and phone number"); return; }
+            alert(`Thank you ${name}! We’ll call you shortly at ${phone} to confirm your physiotherapy session.`);
+            form.reset();
+        });
+    }
+    // WhatsApp booking with form details
+    const waBtnForm = document.getElementById('whatsappFormBtn');
+    if(waBtnForm){
+        waBtnForm.addEventListener('click', () => {
+            let name = document.getElementById('fullname').value || '';
+            let phone = document.getElementById('mobile').value || '';
+            let condition = document.getElementById('condition').value || '';
+            let waMessage = `Appointment Request%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AIssue: ${encodeURIComponent(condition)}%0ALocation: Mhow`;
+            if(!name && !phone) waMessage = `Hello Dr. Preeti, I need physiotherapy appointment. Please help.`;
+            window.open(`https://wa.me/916260886464?text=${waMessage}`, '_blank');
+        });
+    }
+    // smooth scroll for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e){
+            const target = this.getAttribute('href');
+            if(target === "#" || target === "") return;
+            const el = document.querySelector(target);
+            if(el){
+                e.preventDefault();
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if(navMenu.classList.contains('show')) navMenu.classList.remove('show');
+            }
+        });
+    });
+</script>
+</body>
+</html>
